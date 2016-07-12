@@ -21,11 +21,13 @@ if !exists("kerbulator_no_function_highlight")
 	syn keyword kerbulatorFunction abs acos acos_rad asin asin_rad atan atan_rad ceil cos cos_rad cosh cosh_rad exp
 	syn keyword kerbulatorFunction floor ln log log10 max min pow rand
 	syn keyword kerbulatorFunction round sign sin sin_rad sinh sinh_rad sqrt tan tan_rad tanh tanh_rad len
-	syn keyword kerbulatorFunction mag norm dot cross 
+	syn keyword kerbulatorFunction mag norm dot cross all any
+	syn keyword kerbulatorFunction if otherwise
 endif
 
 if !exists("kerbulator_no_operator_highlight")
 	syn match kerbulatorOperator '='
+	syn match kerbulatorOperator '={'
 	syn match kerbulatorOperator ':'
 	syn match kerbulatorOperator '\-'
 	syn match kerbulatorOperator '+'
@@ -42,6 +44,21 @@ if !exists("kerbulator_no_operator_highlight")
 	syn match kerbulatorOperator '⌋'
 	syn match kerbulatorOperator '⌈'
 	syn match kerbulatorOperator '⌉'
+	syn match kerbulatorOperator '<'
+	syn match kerbulatorOperator '>'
+	syn match kerbulatorOperator '=='
+	syn match kerbulatorOperator '!='
+	syn match kerbulatorOperator '≠'
+	syn match kerbulatorOperator '<='
+	syn match kerbulatorOperator '≤'
+	syn match kerbulatorOperator '>='
+	syn match kerbulatorOperator '≥'
+	syn match kerbulatorOperator '!'
+	syn match kerbulatorOperator '¬'
+	syn match kerbulatorOperator '∧'
+	syn match kerbulatorOperator 'and'
+	syn match kerbulatorOperator '∨'
+	syn match kerbulatorOperator 'or'
 endif
 
 if !exists("kerbulator_no_number_highlight")
@@ -62,7 +79,7 @@ if !exists("kerbulator_no_number_highlight")
 	syn match kerbulatorNumber '\<\d[[:digit:]]*\.\d*[eE][\-+]\=\d\+\>'
 endif
 
-syn match kerbulatorComment '".*"'
+syn match kerbulatorComment '".\{-}"'
 syn match kerbulatorComment '#.*$'
 
 let b:current_syntax = "kerbulator"
