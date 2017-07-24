@@ -18,7 +18,7 @@ syn match kerbulatorParameter 'in:'
 syn match kerbulatorParameter 'out:'
 
 if !exists("kerbulator_no_function_highlight")
-	syn keyword kerbulatorFunction abs acos acos_rad asin asin_rad atan atan_rad ceil cos cos_rad cosh cosh_rad exp
+	syn keyword kerbulatorFunction abs acos acos_rad asin asin_rad atan atan_rad atan2 atan2_rad ceil cos cos_rad cosh cosh_rad exp
 	syn keyword kerbulatorFunction floor ln log log10 max min pow rand
 	syn keyword kerbulatorFunction round sign sin sin_rad sinh sinh_rad sqrt tan tan_rad tanh tanh_rad len
 	syn keyword kerbulatorFunction mag norm dot cross all any
@@ -56,9 +56,9 @@ if !exists("kerbulator_no_operator_highlight")
 	syn match kerbulatorOperator '!'
 	syn match kerbulatorOperator '¬'
 	syn match kerbulatorOperator '∧'
-	syn match kerbulatorOperator 'and'
+	syn match kerbulatorOperator 'and '
 	syn match kerbulatorOperator '∨'
-	syn match kerbulatorOperator 'or'
+	syn match kerbulatorOperator 'or '
 endif
 
 if !exists("kerbulator_no_number_highlight")
